@@ -1,49 +1,50 @@
  
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { AuthGuard, ClerkProtectedRoute, SignInForm, SignUpForm } from '../features/auth';
-import { AuthLayout } from '../layouts/authLayout';
-import { Dashboard } from '../pages/dashboard';
-import { AppLayout } from '../layouts/appLayout';
-import { Home } from '../pages/home';
+import { AuthGuard,SignInForm, SignUpForm } from '../features/auth';
+import { AuthLayout } from '../layouts/AuthLayout';
+// import { Dashboard } from '../pages/dashboard';
+import { AppLayout } from '../layouts/AppLayout';
+// import { Home } from '../pages/HomePage';
+// import { Dashboard } from '../features/dashboard/pages/DashboardPage';
+import { HomePage } from '@/pages/HomePage';
+import Dashboard from '@/features/dashboard/pages/DashboardPage';
 
 export const AppRoutes = () => {
   return (
     <Routes>
       {/* Public Home Route */}
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<HomePage />} />
       
       {/* Auth Routes - Keep your existing auth pages */}
       <Route 
-        path="/sign-in" 
+        path="/login" 
         element={
-          <AuthGuard redirectTo="/dashboard">
-            <AuthLayout>
+             <AuthLayout>
               <SignInForm />
             </AuthLayout>
-          </AuthGuard>
-        } 
+         } 
       />
       
       <Route 
-        path="/sign-up" 
+        path="/register" 
         element={
           <AuthGuard redirectTo="/dashboard">
             <AuthLayout>
               <SignUpForm />
             </AuthLayout>
+            
           </AuthGuard>
+
         } 
       />
       
-      {/* Protected Routes - Now using ClerkProtectedRoute */}
+      {/* Protected Routes -  */}
       <Route 
         path="/dashboard" 
         element={
-          <ClerkProtectedRoute>
             <AppLayout>
               <Dashboard />
             </AppLayout>
-          </ClerkProtectedRoute>
         } 
       />
       
@@ -51,22 +52,18 @@ export const AppRoutes = () => {
       <Route 
         path="/profile" 
         element={
-          <ClerkProtectedRoute>
             <AppLayout>
               <div>Profile Page</div>
             </AppLayout>
-          </ClerkProtectedRoute>
         } 
       />
       
       <Route 
         path="/settings" 
         element={
-          <ClerkProtectedRoute>
             <AppLayout>
               <div>Settings Page</div>
             </AppLayout>
-          </ClerkProtectedRoute>
         } 
       />
       

@@ -1,23 +1,19 @@
 // src/App.tsx
-import { ClerkProvider } from '@clerk/clerk-react';
-import { BrowserRouter } from 'react-router-dom';
+ import { BrowserRouter } from 'react-router-dom';
 // import { AppRoutes } from './routes/AppRoutes';
-import { CLERK_CONFIG } from './lib/clerk';
-import './App.css';
-import { AppRoutes } from './routes/appRoutes';
+ import './App.css';
+import { AppRoutes } from './routes/AppRoutes';
+import { AppProviders } from './providers/AppProviders';
 
 function App() {
   return (
-<ClerkProvider 
-  publishableKey={CLERK_CONFIG.publishableKey}
-  signInFallbackRedirectUrl={CLERK_CONFIG.signInFallbackRedirectUrl}
-  signUpFallbackRedirectUrl={CLERK_CONFIG.signUpFallbackRedirectUrl}
->
+ 
       <BrowserRouter>
+      <AppProviders>
         <AppRoutes />
+      </AppProviders>
       </BrowserRouter>
-    </ClerkProvider>
-  );
+   );
 }
 
 export default App;

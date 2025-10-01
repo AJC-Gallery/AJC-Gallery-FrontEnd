@@ -19,5 +19,16 @@ export default tseslint.config([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+
+    // <-- ADD THIS SETTINGS BLOCK
+    settings: {
+      'import/resolver': {
+        // use the typescript resolver which will read your tsconfig paths
+        typescript: {
+          // point to the tsconfig that contains "paths" (adjust if needed)
+          project: './tsconfig.app.json'
+        }
+      }
+    }
   },
 ])
