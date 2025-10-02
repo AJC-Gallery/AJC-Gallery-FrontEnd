@@ -19,6 +19,7 @@ export const AppRoutes = () => {
       
       {/* Auth Routes - Keep your existing auth pages */}
       {/* te */}
+      {/* dgf */}
       <Route 
         path="/login" 
         element={
