@@ -1,7 +1,8 @@
 // src/layouts/AppLayout.tsx
 import { Outlet } from 'react-router-dom';
-import { UserButton } from '../features/auth';
+// import { UserButton } from '../features/auth';
 import type { ReactNode } from 'react';
+import { UserButton } from '@/components/common/UserButton';
 
 interface AppLayoutProps {
   children?: ReactNode;
@@ -16,7 +17,7 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <h1 className="text-xl text-white font-bold text-gray-900">
-Tradion AI              </h1>
+AJC GALLERY              </h1>
             </div>
             
             <div className="flex  items-center space-x-4">
