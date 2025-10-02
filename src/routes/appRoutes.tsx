@@ -14,6 +14,7 @@ import { AuthLayout } from '@/layouts/authLayout';
 export const AppRoutes = () => {
   return (
     <Routes>
+      {/* kkk */}
       {/* Public Home Route */}
       <Route path="/" element={<HomePage />} />
       
