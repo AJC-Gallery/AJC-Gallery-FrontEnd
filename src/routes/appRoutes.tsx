@@ -9,7 +9,7 @@ import { AuthGuard,SignInForm, SignUpForm } from '../features/auth';
 import { HomePage } from '@/pages/HomePage';
 import Dashboard from '@/features/dashboard/pages/DashboardPage';
 import { AppLayout } from '@/layouts/appLayout';
-import { AuthLayout } from '@/layouts/AuthLayout';
+import { AuthLayout } from '@/layouts/authLayout';
 
 export const AppRoutes = () => {
   return (
