@@ -1,7 +1,7 @@
  
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthGuard,SignInForm, SignUpForm } from '../features/auth';
-import { AuthLayout } from '../layouts/AuthLayout';
+// import { AuthLayout } from '../layouts/AuthLayout';
 // import { Dashboard } from '../pages/dashboard';
 // import { AppLayout } from '../layouts/AppLayout';
 // import { Home } from '../pages/HomePage';
@@ -9,6 +9,7 @@ import { AuthLayout } from '../layouts/AuthLayout';
 import { HomePage } from '@/pages/HomePage';
 import Dashboard from '@/features/dashboard/pages/DashboardPage';
 import { AppLayout } from '@/layouts/appLayout';
+import { AuthLayout } from '@/layouts/AuthLayout';
 
 export const AppRoutes = () => {
   return (
