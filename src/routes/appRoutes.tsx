@@ -18,6 +18,7 @@ export const AppRoutes = () => {
       <Route path="/" element={<HomePage />} />
       
       {/* Auth Routes - Keep your existing auth pages */}
+      {/* te */}
       <Route 
         path="/login" 
         element={
