@@ -1,19 +1,18 @@
 import { createContext } from 'react';
+import type { User, LoginRequest, RegisterRequest } from '../types';
 
-interface User {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-}
-
-export interface AuthContextType {
+export interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  register: (userData: unknown) => Promise<void>;
+  error: string | null;
+}
+
+export interface AuthContextType extends AuthState {
+  login: (credentials: LoginRequest) => Promise<void>;
+  register: (userData: RegisterRequest) => Promise<void>;
   logout: () => Promise<void>;
+  clearError: () => void;
 }
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);

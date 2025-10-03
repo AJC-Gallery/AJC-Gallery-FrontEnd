@@ -11,7 +11,7 @@ export const apiConfig = {
 
 export const API_ENDPOINTS = {
   AUTH: {
-    LOGIN: '/authentication/login',
+    LOGIN: '/auth/login',
     REGISTER: '/auth/register',
     LOGOUT: '/auth/logout',
     PROFILE: '/auth/profile',

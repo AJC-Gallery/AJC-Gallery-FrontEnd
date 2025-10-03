@@ -14,23 +14,22 @@ export interface User extends BaseEntity {
 }
 
 export interface LoginRequest {
-  email: string;
+  usernameOrEmail: string;
   password: string;
-  rememberMe?: boolean;
 }
+
 
 export interface RegisterRequest {
   email: string;
   username: string;
   password: string;
-  confirmPassword: string;
   firstName: string;
   lastName: string;
   otherName?: string;
-  gender: Gender;
+  gender: 'MALE' | 'FEMALE' | 'OTHER';
   nationality: string;
-  agreeToTerms: boolean;
 }
+
 
 export interface AuthResponse {
   user: User;
